@@ -1,0 +1,15 @@
+{
+  "name": "kora-coffee",
+  "version": "1.0.0",
+  "private": true,
+  "description": "KORA — интернет-магазин specialty-кофе: статический фронтенд + Node.js/SQLite бэкенд без зависимостей",
+  "type": "module",
+  "engines": {
+    "node": ">=22.13"
+  },
+  "scripts": {
+    "start": "node server/server.js",
+    "dev": "node --watch server/server.js",
+    "reset-db": "node -e \"try{require('fs').rmSync('data',{recursive:true,force:true})}catch(e){console.error('Не удалось удалить data/ ('+e.code+'): база открыта — остановите сервер (Ctrl+C) и повторите');process.exit(1)}\""
+  }
+}
